@@ -17,4 +17,4 @@ EXPOSE 8080
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 
-CMD ["/usr/local/bin/gunicorn", "-w", "2", "--bind", "0.0.0.0:8080", "wsgi:app" ,"--timeout", "300"]
+CMD ["/usr/local/bin/gunicorn", "-w", "2", "--bind", "0.0.0.0:8080", "wsgi" ,"--timeout", "300"]

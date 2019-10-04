@@ -11,8 +11,7 @@ def create_app():
 
     app.secret_key = 'some secret key'
     app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-    #app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
-    
+    app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
     gunicorn_logger = logging.getLogger('gunicorn.error')
     app.logger.handlers = gunicorn_logger.handlers
