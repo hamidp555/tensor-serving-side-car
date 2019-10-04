@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    image: "serving-tensor-side-car:latest"
+    ports:
+      - "8080:8080"
+  serving-tensor:
+    image: "tensorflow/serving:latest"
+    ports:
+       - "8501:8501"
+    volumes:
+      - /Users/hamid.poursepanj/Documents/projects/hack-day-tensorflow/saved_model_sports_classifier/sports_classifier:/models/sports_classifier
+    environment:
+      MODEL_NAME: sports_classifier
