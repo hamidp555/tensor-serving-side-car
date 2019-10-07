@@ -4,6 +4,10 @@ services:
     image: "serving-tensor-side-car:latest"
     ports:
       - "8080:8080"
+    environment:
+      SERVING_TENSOR_PORT: 8501
+      SERVING_TENSOR_HOST: 'serving-tensor'
+      SERVING_TENSOR_MODEL_NAME: 'sports_classifier'
   serving-tensor:
     image: "tensorflow/serving:latest"
     ports:
