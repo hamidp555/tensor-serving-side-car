@@ -1,6 +1,6 @@
 Flask==1.0.0
 Flask-Restless==0.17.0
-Flask-Cors==3.0.8
+Flask-Cors==3.0.9
 requests==2.20.0
 Werkzeug==0.15.5
 Pillow== 6.2.0
